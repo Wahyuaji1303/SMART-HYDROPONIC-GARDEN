@@ -23,9 +23,7 @@ function createSpline(id, label, color) {
       maintainAspectRatio: false,
       animation: false,
       plugins: {
-        legend: {
-          display: true
-        }
+        legend: { display: true }
       },
       scales: {
         x: { display: false },
@@ -57,7 +55,6 @@ function updateChart(chart, value) {
 
 // ===== simulasi =====
 function generateData() {
-
   const tds = 850 + Math.random() * 200;
   const ph = 5.8 + Math.random();
   const water = 60 + Math.random() * 30;
@@ -65,7 +62,6 @@ function generateData() {
   const pumpAir = water < 65;
   const pumpNutrisi = tds < 900;
 
-  // update text
   document.getElementById('tds').innerHTML = tds.toFixed(0);
   document.getElementById('ph').innerHTML = ph.toFixed(2);
   document.getElementById('water').innerHTML = water.toFixed(0) + "%";
@@ -73,7 +69,6 @@ function generateData() {
   document.getElementById('pumpAir').innerHTML = pumpAir ? "ON" : "OFF";
   document.getElementById('pumpNutrisi').innerHTML = pumpNutrisi ? "ON" : "OFF";
 
-  // update chart
   updateChart(chartTDS, tds);
   updateChart(chartPH, ph);
   updateChart(chartWater, water);
