@@ -1,10 +1,24 @@
 /* ===== GLOBAL ===== */
 body {
-  background: #0b0f1a;
+  background: url("background.png") no-repeat center center fixed;
+  background-size: cover;
   color: white;
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== overlay ===== */
+.bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 15, 26, 0.82);
+  z-index: -1;
 }
 
 /* ===== HEADER ===== */
@@ -16,18 +30,26 @@ body {
 .title-main {
   font-size: 18px;
   font-weight: 600;
-  color: white; /* ✅ judul putih */
+  color: white;
   line-height: 1.4;
 }
 
 .subtitle-green {
-  color: #00ffd5; /* ✅ hijau muda */
+  color: #ecf0ef;
   margin-top: 6px;
 }
 
 .subtitle-red {
-  color: #ff3b3b; /* ✅ merah */
-  margin-top: 4px;
+  color: hsl(0, 10%, 90%);
+  margin-top: 6px;
+}
+
+/* ===== logo header ===== */
+.header-logo {
+  width: 70px;
+  margin-top: 8px;
+  margin-bottom: 6px;
+  opacity: 0.95;
 }
 
 /* ===== LAYOUT ===== */
@@ -46,12 +68,13 @@ body {
 
 /* ===== CARD ===== */
 .card {
-  background: #111827;
+  background: rgba(17, 24, 39, 0.92);
   padding: 15px;
   margin-bottom: 12px;
   border-radius: 14px;
   text-align: center;
   box-shadow: 0 0 12px rgba(0,255,200,0.12);
+  backdrop-filter: blur(6px);
 }
 
 .value {
@@ -63,7 +86,7 @@ body {
 .status-box {
   margin-top: 15px;
   font-size: 16px;
-  background: #111827;
+  background: rgba(17, 24, 39, 0.92);
   padding: 12px;
   border-radius: 12px;
 }
@@ -76,15 +99,15 @@ body {
   gap: 15px;
 }
 
-/* ⭐ ukuran grafik diperkecil agar tidak full */
 .chart-card {
-  background: #111827;
+  background: rgba(17, 24, 39, 0.92);
   padding: 12px;
   border-radius: 14px;
   width: 100%;
-  max-width: 420px;   /* ✅ BATAS LEBAR */
-  margin: 0 auto;     /* ✅ center */
+  max-width: 420px;
+  margin: 0 auto;
   box-shadow: 0 0 12px rgba(0,255,200,0.12);
+  backdrop-filter: blur(6px);
 }
 
 .chart-card h4 {
@@ -96,7 +119,34 @@ body {
 .chart-card canvas {
   background: white;
   border-radius: 10px;
-  height: 180px !important; /* ✅ tinggi ideal */
+  height: 180px !important;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+
+.footer-text-white {
+  color: white;
+  font-weight: 600;
+}
+
+.footer-text-red {
+  color: #ff3b3b;
+  margin-top: 4px;
+}
+
+.footer-text-orange {
+  color: orange;
+  margin-top: 4px;
+}
+
+.footer-text-blue {
+  color: #3aa0ff;
+  margin-top: 4px;
 }
 
 /* ===== MOBILE ===== */
@@ -111,5 +161,9 @@ body {
 
   .title-main {
     font-size: 15px;
+  }
+
+  .header-logo {
+    width: 55px;
   }
 }
