@@ -1,0 +1,115 @@
+/* ===== GLOBAL ===== */
+body {
+  background: #0b0f1a;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* ===== HEADER ===== */
+.header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.title-main {
+  font-size: 18px;
+  font-weight: 600;
+  color: white; /* ✅ judul putih */
+  line-height: 1.4;
+}
+
+.subtitle-green {
+  color: #00ffd5; /* ✅ hijau muda */
+  margin-top: 6px;
+}
+
+.subtitle-red {
+  color: #ff3b3b; /* ✅ merah */
+  margin-top: 4px;
+}
+
+/* ===== LAYOUT ===== */
+.main-layout {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+/* ===== LEFT PANEL ===== */
+.left-panel {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: #111827;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0,255,200,0.12);
+}
+
+.value {
+  font-size: 26px;
+  font-weight: bold;
+  color: #00ffd5;
+}
+
+.status-box {
+  margin-top: 15px;
+  font-size: 16px;
+  background: #111827;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+/* ===== RIGHT PANEL ===== */
+.right-panel {
+  flex: 1.4;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+/* ⭐ ukuran grafik diperkecil agar tidak full */
+.chart-card {
+  background: #111827;
+  padding: 12px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 420px;   /* ✅ BATAS LEBAR */
+  margin: 0 auto;     /* ✅ center */
+  box-shadow: 0 0 12px rgba(0,255,200,0.12);
+}
+
+.chart-card h4 {
+  text-align: center;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.chart-card canvas {
+  background: white;
+  border-radius: 10px;
+  height: 180px !important; /* ✅ tinggi ideal */
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .chart-card {
+    max-width: 100%;
+  }
+
+  .title-main {
+    font-size: 15px;
+  }
+}

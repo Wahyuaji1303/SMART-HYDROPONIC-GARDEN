@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Hydroponic Dashboard</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="header">
+  <h1 class="title-main">
+    IOT-BASED SMART HYDROPONIC GARDEN WITH REAL-TIME MONITORING AND AUTOMATED IRRIGATION CONTROL
+  </h1>
+  <h3 class="subtitle-green">KELOMPOK 6 RTC</h3>
+  <h3 class="subtitle-red">DEPARTEMEN TEKNIK MESIN INDUSTRI</h3>
+</div>
+
+<div class="main-layout">
+
+  <!-- LEFT PANEL -->
+  <div class="left-panel">
+
+    <div class="card">
+      <h3>TDS</h3>
+      <div id="tds" class="value">--</div>
+    </div>
+
+    <div class="card">
+      <h3>pH</h3>
+      <div id="ph" class="value">--</div>
+    </div>
+
+    <div class="card">
+      <h3>Water Level</h3>
+      <div id="water" class="value">--</div>
+    </div>
+
+    <div class="status-box">
+      <div>Pump Air: <span id="pumpAir">OFF</span></div>
+      <div>Pump Nutrisi: <span id="pumpNutrisi">OFF</span></div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="right-panel">
+
+    <div class="chart-card">
+      <h4>Grafik TDS (ppm)</h4>
+      <canvas id="chartTDS"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h4>Grafik pH</h4>
+      <canvas id="chartPH"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h4>Grafik Water Level (%)</h4>
+      <canvas id="chartWater"></canvas>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
